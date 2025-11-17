@@ -20,6 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  
 }
 .header {
 background-color:#1d1a20;
@@ -62,6 +63,13 @@ align-items: center;
    padding: 1 rem;
 
 }
+.carrito {
+   width: 10%;
+   border-radius: 0.5rem; 
+  padding: 0%;
+  justify-content: left;
+  display: flex;
+}
 
 /* ================= */
 /* Pie de pagina  */
@@ -70,6 +78,7 @@ align-items: center;
 
 
 .footer {
+
 background-color: #1d1a20;
 display: flex;
 justify-content: space-between;
@@ -77,8 +86,8 @@ align-items: center;
 
 }
 .footer p {
-  color:rgba(253, 81, 1, 0.75);  
- padding: 1rem;
+color:rgba(253, 81, 1, 0.75);  
+padding: 1rem;
 margin-right: 2rem;   
 font-weight: bold; 
 }
@@ -110,6 +119,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5%;
 }
 .titulo-inicio {
 text-align: center;
@@ -126,17 +136,19 @@ text-align: center;
 font-size: 3rem;
 padding: 1rem;
 margin: 3rem;
+
 }
 .contenedor-productos{
-
+  
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
 
 }
-.targeta-producto {
+.tarjeta-producto {
     background-color: #1d1a20;
+    color:rgba(253, 81, 1, 0.75); 
     padding: 1rem;
     width: 30rem;
     border-radius:  1rem;
@@ -147,18 +159,20 @@ margin: 3rem;
     
 
 }
-.targeta-producto img{
+.tarjeta-producto img{
 
     width: 100%;
     border-radius: 0.5rem;
 }
 .targeta-producto h3{
-  color:rgba(253, 81, 1, 0.75);
+ color:rgba(253, 81, 1, 0.75); 
   font-size: 2rem;  
   font-weight: bold;
+  background-color: white;
 }
 .targeta-producto p{
   color:rgba(253, 81, 1, 0.75);
   font-size: 2rem; 
   align-items:flex-end;
+  
 }
