@@ -35,9 +35,9 @@
 // {    console.log(materias)}
 
 //import {productos} from "./productos.js"; 
-import {agregarAlCarrito, eliminarProducto, vaciarCarrito} from "./funcionesCarritos.js";
-import {obtenerCarrito, guardarCarrito} from "./storage.js";
-import { actualizarContador, mostrarMensaje} from "./ui.js";
+import {agregarAlCarrito, } from "./funcionesCarritos.js";
+import {obtenerCarrito, } from "./storage.js";
+import { actualizarContador,} from "./ui.js";
 
 document.addEventListener("DOMContentLoaded",()=> {
     const contenedor = document.getElementById("contenedor-productos");
@@ -47,9 +47,11 @@ document.addEventListener("DOMContentLoaded",()=> {
     //usamos el fetch para usar la data de json y pasarla a codigo de java script 
 
     fetch("../data/productos.json").then((respuesta) => {
+        console.log(respuesta);
         if (!respuesta.ok){
             throw new Error(`Error http status: ${respuesta.status}`);
         }
+        
         return respuesta.json()
 
     }).then((data) =>{data.forEach((producto) => {
@@ -57,7 +59,7 @@ document.addEventListener("DOMContentLoaded",()=> {
         tarjeta.classList.add("tarjeta-producto");
 
         const img = document.createElement("img");
-        img.src = `./${producto.imagen}`;
+        img.src = `../${producto.imagen}`;
         img.alt = producto.nombre;
 
         const titulo = document.createElement("h3");
