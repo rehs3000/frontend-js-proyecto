@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded",()=> {
 
     //usamos el fetch para usar la data de json y pasarla a codigo de java script 
 
-    fetch("../data/productos.json").then((respuesta) => {
+    fetch("./data/productos.json").then((respuesta) => {
         console.log(respuesta);
         if (!respuesta.ok){
             throw new Error(`Error http status: ${respuesta.status}`);
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded",()=> {
         tarjeta.classList.add("tarjeta-producto");
 
         const img = document.createElement("img");
-        img.src = `../${producto.imagen}`;
+        img.src = `./${producto.imagen}`;
         img.alt = producto.nombre;
 
         const titulo = document.createElement("h3");
